@@ -1,6 +1,4 @@
+tensorflow==2.12.0
 streamlit
-pandas
 numpy
-scikit-learn
-matplotlib
-tensorflow==2.12.0  # Pin to a specific version if needed
+pandas
