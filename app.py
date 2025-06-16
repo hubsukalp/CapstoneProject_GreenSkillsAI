@@ -34,6 +34,11 @@ except Exception as e:
     st.error(f"❌ Error loading files: {e}")
     st.stop()
 
+# Check if DataFrame is empty
+if df.empty or 'AQI' not in df.columns:
+    st.error("AQI data is missing or empty in the CSV file.")
+    st.stop()
+
 # Display Current AQI
 st.subheader("📍 Today's AQI")
 current_aqi = df['AQI'].iloc[-1]
